@@ -1,4 +1,7 @@
 #!/usr/bin/env bash
+# Author: Wenyi Tang
+# Date: Mar. 18 2019
+# Email: wenyitang@outlook.com
 
 #DRN_TEST_MAT=
 #DRN_SAVE_DIR=
