@@ -3,9 +3,14 @@ python:
   - "3.6"
 cache: pip
 
+before_install:
+  - wget https://github.com/LoSealL/NTIRE2019-Competition-Test/releases/download/data/Test_LR.zip -P data/
+  - wget https://github.com/LoSealL/NTIRE2019-Competition-Test/releases/download/data/BenchmarkNoisyBlocksSrgb.zip -P data/
+
 install:
-  - pip install tensorflow torch torchvision
+  - pip install tensorflow
   - pip install -U -e .
+
 script:
   - unzip -q data/BenchmarkNoisyBlocksSrgb -d data/
   - unzip -q data/Test_LR -d data/Test_LR
