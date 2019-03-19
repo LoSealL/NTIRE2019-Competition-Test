@@ -6,7 +6,10 @@
 #DRN_TEST_MAT=
 #DRN_SAVE_DIR=
 
-git clone https://github.com/LoSealL/VideoSuperResolution -b ntire_2019 && cd VideoSuperResolution
+if [ ! -e VideoSuperResolution ];
+then
+  git clone https://github.com/LoSealL/VideoSuperResolution -b ntire_2019 && pushd VideoSuperResolution
+fi
 
 if [ ! -e setup.py ];
 then
@@ -25,3 +28,4 @@ python eval.py drn --cuda -t=../${DRN_SAVE_DIR}/1/ --output_index=0
 popd
 python VSR/Tools/DataProcessing/NTIRE19Denoise.py --results=Results/drn/1/ --save_dir=${DRN_SAVE_DIR}/2/
 echo " [*] Processing done. Results are in ${DRN_SAVE_DIR}/2/"
+popd

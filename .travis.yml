@@ -9,7 +9,6 @@ before_install:
 
 install:
   - pip install tensorflow
-  - pip install -U -e .
 
 script:
   - unzip -q data/BenchmarkNoisyBlocksSrgb -d data/

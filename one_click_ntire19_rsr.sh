@@ -8,7 +8,10 @@
 _PATCH_SIZE=768
 _STRIDE=760
 
-git clone https://github.com/LoSealL/VideoSuperResolution -b ntire_2019 && cd VideoSuperResolution
+if [ ! -e VideoSuperResolution ];
+then
+  git clone https://github.com/LoSealL/VideoSuperResolution -b ntire_2019 && pushd VideoSuperResolution
+fi
 
 if [ ! -e setup.py ];
 then
@@ -27,3 +30,4 @@ python eval.py rsr --cuda --ensemble -t=../${RSR_SAVE_DIR}/1/
 popd
 python VSR/Tools/DataProcessing/NTIRE19RSR.py --ref_dir=${RSR_TEST_DIR} --patch_size=${_PATCH_SIZE} --stride=${_STRIDE} --results=Results/rsr/1/ --save_dir=${RSR_SAVE_DIR}/2/
 echo " [*] Processing done. Results are in ${RSR_SAVE_DIR}/2/"
+popd
