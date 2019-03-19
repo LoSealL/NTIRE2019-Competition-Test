@@ -8,9 +8,10 @@
 
 if [ ! -e VideoSuperResolution ];
 then
-  git clone https://github.com/LoSealL/VideoSuperResolution -b ntire_2019 && pushd VideoSuperResolution
+  git clone https://github.com/LoSealL/VideoSuperResolution -b ntire_2019
 fi
 
+pushd VideoSuperResolution
 if [ ! -e setup.py ];
 then
   echo " [!] Can't find setup.py file! Make sure you are in the right place!"
