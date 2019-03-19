@@ -1,0 +1,17 @@
+language: python
+python:
+  - "3.6"
+cache: pip
+
+install:
+  - pip install tensorflow torch torchvision
+  - pip install -U -e .
+script:
+  - unzip -q data/BenchmarkNoisyBlocksSrgb -d data/
+  - unzip -q data/Test_LR -d data/Test_LR
+  - RSR_TEST_DIR=data/Test_LR
+  - RSR_SAVE_DIR=results/rsr
+  - . one_click_ntire19_rsr.sh
+  - DRN_TEST_MAT=data/BenchmarkNoisyBlocksSrgb/BenchmarkNoisyBlocksSrgb.mat
+  - DRN_SAVE_DIR=results/drn
+  - . one_click_ntire19_drn.sh
