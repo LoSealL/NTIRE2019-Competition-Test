@@ -19,7 +19,7 @@ fi
 echo "DRN_TEST_MAT=${DRN_TEST_MAT}"
 echo "DRN_SAVE_DIR=${DRN_SAVE_DIR}"
 
-pip install -e .
+pip install -q -e .
 python prepare_data.py --filter=drn -q
 echo " [*] Model extracted into Results/drn/save"
 python VSR/Tools/DataProcessing/NTIRE19Denoise.py --validation=${DRN_TEST_MAT} --save_dir=${DRN_SAVE_DIR}/1/
