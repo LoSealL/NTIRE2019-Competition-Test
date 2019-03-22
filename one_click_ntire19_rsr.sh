@@ -34,7 +34,7 @@ python prepare_data.py --filter=rsr -q
 echo " [*] Model extracted into Results/rsr/save"
 python VSR/Tools/DataProcessing/NTIRE19RSR.py --ref_dir=${RSR_TEST_DIR} --patch_size=${_PATCH_SIZE} --stride=${_STRIDE} --save_dir=${RSR_SAVE_DIR}/1/
 pushd VSRTorch
-python eval.py rsr --cuda --ensemble -t=../${RSR_SAVE_DIR}/1/
+python eval.py rsr --cuda --ensemble -t=${RSR_SAVE_DIR}/1/
 popd
 python VSR/Tools/DataProcessing/NTIRE19RSR.py --ref_dir=${RSR_TEST_DIR} --patch_size=${_PATCH_SIZE} --stride=${_STRIDE} --results=Results/rsr/1/ --save_dir=${RSR_SAVE_DIR}/2/
 echo " [*] Processing done. Results are in ${RSR_SAVE_DIR}/2/"

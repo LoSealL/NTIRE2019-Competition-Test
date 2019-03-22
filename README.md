@@ -2,16 +2,22 @@
 Make sure you are in the root folder. You should also have `tensorflow(-gpu)>=1.12.0` and `pytorch>=1.0.0` installed manually.
 
 Before running `one_click_ntire19_rsr.sh` for Real Image Super Resolution, set two paths: `RSR_TEST_DIR` for testing images and `RSR_SAVE_DIR` for saving results.
+
+*It's recommended to use absolute path.*
+
 ```bash
-RSR_TEST_DIR=bla/bla/bla
-RSR_SAVE_DIR=bli/bli/bli
+RSR_TEST_DIR=/bla/bla/bla
+RSR_SAVE_DIR=/bli/bli/bli
 . one_click_ntire19_rsr.sh
 ```
- 
+
 Before running `one_click_ntire19_drn.sh` for sRGB Image Denoising, set two paths: `DRN_TEST_MAT` for testing mat file and `DRN_SAVE_DIR` for saving results.
+
+*It's recommended to use absolute path.*
+
 ```bash
-DRN_TEST_MAT=bla/bla/bla/BenchmarkNoisyBlocksSrgb.mat
-DRN_SAVE_DIR=bli/bli/bli
+DRN_TEST_MAT=/bla/bla/bla/BenchmarkNoisyBlocksSrgb.mat
+DRN_SAVE_DIR=/bli/bli/bli
 . one_click_ntire19_drn.sh
 ```
 
@@ -27,7 +33,7 @@ You can also do it step-by-step as follows.
     Note that you should pre-install `tensorflow` and `pytorch`.
 
 2. Download the pre-trained model:
-   
+  
    **make sure you are in the root folder.*
    
    For Real Image Super-Resolution
