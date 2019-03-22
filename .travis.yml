@@ -18,7 +18,7 @@ script:
   - RSR_SAVE_DIR=../results/rsr
   # Only for debug
   - _PATCH_SIZE=64
-  - _STRIDE=1000
+  - _STRIDE=64
   - . one_click_ntire19_rsr.sh
   - DRN_TEST_MAT=../data/BenchmarkNoisyBlocksSrgb/BenchmarkNoisyBlocksSrgb.mat
   - DRN_SAVE_DIR=../results/drn
