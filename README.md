@@ -1,5 +1,5 @@
 ## One-click script
-Make sure you are in the root folder. You should also have `tensorflow(-gpu)>=1.12.0` and `pytorch>=1.0.0` installed manually.
+Make sure you are in the root folder. You should also have`python>=3.6`,  `tensorflow(-gpu)>=1.12.0` and `pytorch>=1.0.0` installed manually.
 
 Before running `one_click_ntire19_rsr.sh` for Real Image Super Resolution, set two paths: `RSR_TEST_DIR` for testing images and `RSR_SAVE_DIR` for saving results.
 
